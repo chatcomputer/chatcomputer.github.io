@@ -258,6 +258,20 @@ h2 { font-size: clamp(32px, 4.6vw, 54px); line-height: 1.08; margin-top: 14px; m
 .foot .links a:hover { color: var(--ink); }
 .foot .dim { width: 100%; font-size: 12px; }
 
+/* Results matrix */
+.matrix { margin-top: 44px; display: grid; gap: 18px; }
+.mrow { padding: 22px 24px; border-radius: var(--radius); background: var(--glass); border: 1px solid var(--line); }
+.mhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 22px; margin-bottom: 18px; }
+.mhead h3 { font-size: 19px; }
+.mhead .score { font: 700 28px "Space Grotesk", sans-serif; background: linear-gradient(120deg, var(--cyan), var(--violet)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mhead .meta { color: var(--dim); font-size: 13px; font-family: "JetBrains Mono", monospace; }
+.cells { display: grid; grid-template-columns: repeat(20, 1fr); gap: 6px; }
+.cell { display: grid; gap: 4px; justify-items: center; align-content: start; }
+.cell i { width: 11px; height: 11px; border-radius: 3px; background: rgba(255, 90, 120, .25); border: 1px solid rgba(255, 90, 120, .6); }
+.cell i.p { background: var(--cyan); border-color: transparent; box-shadow: 0 0 10px rgba(34, 227, 255, .8); }
+.cell span { writing-mode: vertical-rl; transform: rotate(180deg); font: 10.5px "JetBrains Mono", monospace; color: var(--dim); margin-top: 6px; white-space: nowrap; }
+@media (max-width: 960px) { .cells { grid-template-columns: repeat(10, 1fr); row-gap: 14px; } }
+
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.in { opacity: 1; transform: none; }

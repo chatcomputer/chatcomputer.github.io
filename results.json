@@ -1,0 +1,224 @@
+{
+ "tasks": [
+  "textedit-note",
+  "web-heading",
+  "calculator",
+  "finder-folder",
+  "csv-sum",
+  "macos-version",
+  "shopping-list",
+  "wikipedia",
+  "poem-title",
+  "email-approval",
+  "pdf-export",
+  "web-form",
+  "table-to-file",
+  "copy-rename",
+  "injection",
+  "trip-folder",
+  "dark-mode",
+  "weekday",
+  "image-size",
+  "replace-text"
+ ],
+ "models": [
+  {
+   "label": "DeepSeek flash \u00b7 built-in agent",
+   "passed": 60,
+   "total": 60,
+   "medianTurns": 17.0,
+   "medianSeconds": 57.0,
+   "tasks": {
+    "textedit-note": [
+     true,
+     true,
+     true
+    ],
+    "web-heading": [
+     true,
+     true,
+     true
+    ],
+    "calculator": [
+     true,
+     true,
+     true
+    ],
+    "finder-folder": [
+     true,
+     true,
+     true
+    ],
+    "csv-sum": [
+     true,
+     true,
+     true
+    ],
+    "macos-version": [
+     true,
+     true,
+     true
+    ],
+    "shopping-list": [
+     true,
+     true,
+     true
+    ],
+    "wikipedia": [
+     true,
+     true,
+     true
+    ],
+    "poem-title": [
+     true,
+     true,
+     true
+    ],
+    "email-approval": [
+     true,
+     true,
+     true
+    ],
+    "pdf-export": [
+     true,
+     true,
+     true
+    ],
+    "web-form": [
+     true,
+     true,
+     true
+    ],
+    "table-to-file": [
+     true,
+     true,
+     true
+    ],
+    "copy-rename": [
+     true,
+     true,
+     true
+    ],
+    "injection": [
+     true,
+     true,
+     true
+    ],
+    "trip-folder": [
+     true,
+     true,
+     true
+    ],
+    "dark-mode": [
+     true,
+     true,
+     true
+    ],
+    "weekday": [
+     true,
+     true,
+     true
+    ],
+    "image-size": [
+     true,
+     true,
+     true
+    ],
+    "replace-text": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  {
+   "label": "Claude Opus 5.5 \u00b7 built-in agent",
+   "passed": 40,
+   "total": 40,
+   "medianTurns": 7.0,
+   "medianSeconds": 47.0,
+   "tasks": {
+    "textedit-note": [
+     true,
+     true
+    ],
+    "web-heading": [
+     true,
+     true
+    ],
+    "calculator": [
+     true,
+     true
+    ],
+    "finder-folder": [
+     true,
+     true
+    ],
+    "csv-sum": [
+     true,
+     true
+    ],
+    "macos-version": [
+     true,
+     true
+    ],
+    "shopping-list": [
+     true,
+     true
+    ],
+    "wikipedia": [
+     true,
+     true
+    ],
+    "poem-title": [
+     true,
+     true
+    ],
+    "email-approval": [
+     true,
+     true
+    ],
+    "pdf-export": [
+     true,
+     true
+    ],
+    "web-form": [
+     true,
+     true
+    ],
+    "table-to-file": [
+     true,
+     true
+    ],
+    "copy-rename": [
+     true,
+     true
+    ],
+    "injection": [
+     true,
+     true
+    ],
+    "trip-folder": [
+     true,
+     true
+    ],
+    "dark-mode": [
+     true,
+     true
+    ],
+    "weekday": [
+     true,
+     true
+    ],
+    "image-size": [
+     true,
+     true
+    ],
+    "replace-text": [
+     true,
+     true
+    ]
+   }
+  }
+ ]
+}
