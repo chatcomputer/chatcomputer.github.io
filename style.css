@@ -242,6 +242,14 @@ h2 { font-size: clamp(32px, 4.6vw, 54px); line-height: 1.08; margin-top: 14px; m
 .steps .n { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font: 600 13px "JetBrains Mono", monospace; color: #05060f; background: linear-gradient(135deg, var(--cyan), var(--pink)); }
 .steps b { display: block; margin-bottom: 4px; }
 .steps p { margin: 0; color: var(--dim); font-size: 14px; line-height: 1.5; }
+.brew { margin: 26px auto 0; max-width: 760px; }
+.brew p { margin: 0 0 10px; color: var(--dim); font-size: 14px; }
+.cmd { display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(6,8,20,.85); text-align: left; }
+.cmd code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; font: 14px "JetBrains Mono", monospace; color: #d6dbff; }
+.cmd button { flex: none; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--glass); color: var(--ink); font: 500 13px inherit; cursor: pointer; }
+.cmd button:hover { border-color: var(--cyan); }
+.cmd button.done { border-color: var(--cyan); color: var(--cyan); }
+.steps p.alt { margin-top: 6px; font-size: 13px; color: var(--cyan); opacity: .8; }
 .gh-link { display: inline-block; margin-top: 28px; color: var(--dim); font: 500 14px "JetBrains Mono", monospace; text-decoration: none; }
 .gh-link:hover { color: var(--cyan); }
 

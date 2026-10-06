@@ -144,10 +144,11 @@
     "dl.h2": "获取 Chat Computer",
     "dl.sub": "经苹果签名和公证。首次设置会下载并安装虚拟机里的 macOS（约 26 GB）、创建账户、为 agent 授权，全程自动，不用你一步步点。",
     "req.chip": "芯片", "req.chipv": "Apple 芯片", "req.os": "系统", "req.ram": "内存", "req.disk": "磁盘", "req.diskv": "约 70 GB 可用空间",
-    "st.1t": "下载并解压", "st.1d": "打开 ChatComputer.zip，把 Chat Computer.app 拖进「应用程序」。",
+    "st.1t": "下载并解压", "st.1d": "打开 ChatComputer.zip，把 ChatComputer.app 拖进「应用程序」。",
     "st.2t": "打开，点 Continue", "st.2d": "首次设置自动进行，约 10 分钟。需要你时，Dock 图标会跳动提醒。",
     "st.3t": "填上模型", "st.3d": "选服务商、粘贴 API Key，然后写下第一个任务。",
-    "dl.gh": "源码在 GitHub",
+    "dl.gh": "源码在 GitHub", "dl.brew": "或用 Homebrew 安装，同时装好 chatcomputer 命令：", "dl.copy": "复制",
+    "st.1alt": "用 Homebrew 安装的话，这一步已经完成。",
     "faq.eyebrow": "// 常见问题",
     "faq.1q": "我自己的 Mac 安全吗？", "faq.1a": "agent 只操作虚拟机。只有你附上的文件或共享的文件夹它才看得到，共享文件夹默认只读。虚拟机和 App 之间走私有的虚拟 socket，不经过网络。",
     "faq.2q": "模型能看到什么？", "faq.2a": "虚拟机的截图和你的任务文字会发给你选择的模型厂商。你的 API Key 和虚拟机密码不会。",
@@ -245,14 +246,22 @@
   }
   fetch("results.json").then((r) => r.ok ? r.json() : null).then((data) => { results = data; renderMatrix(); }).catch(() => {});
 
+  /* ---------- Copy the Homebrew command ---------- */
+  document.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", () => {
+    navigator.clipboard.writeText(button.dataset.copy).then(() => {
+      button.classList.add("done");
+      setTimeout(() => button.classList.remove("done"), 1500);
+    }).catch(() => {});
+  }));
+
   /* ---------- Latest release ---------- */
   fetch("https://api.github.com/repos/chatcomputer/chatcomputer/releases?per_page=1")
     .then((r) => r.ok ? r.json() : [])
     .then(([release]) => {
       if (!release) return;
-      const zip = (release.assets || []).find((a) => a.name.endsWith(".zip"));
+      // The release page: notes, the zip and its SHA-256 in one place.
       document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = release.tag_name; });
-      if (zip) ["dl-hero", "dl-main"].forEach((id) => { document.getElementById(id).href = zip.browser_download_url; });
+      if (release.html_url) ["dl-hero", "dl-main"].forEach((id) => { document.getElementById(id).href = release.html_url; });
     })
     .catch(() => {});
 

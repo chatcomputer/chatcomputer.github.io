@@ -32,7 +32,7 @@
   </nav>
   <div class="nav-right">
     <button class="lang" id="lang" type="button" aria-label="Switch language">中文</button>
-    <a class="gh" href="https://github.com/chatcomputer/chatcomputer" aria-label="GitHub">
+    <a class="gh" href="https://github.com/chatcomputer/chatcomputer" target="_blank" rel="noopener" aria-label="GitHub">
       <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
     </a>
   </div>
@@ -45,8 +45,8 @@
     <h1 class="reveal"><span data-i18n="hero.h1a">A second Mac that</span><br><span class="grad" data-i18n="hero.h1b">does the work while you chat.</span></h1>
     <p class="lead reveal" data-i18n="hero.lead">Chat Computer runs a private macOS virtual machine on your Mac. Tell it what you need; an AI agent sees the screen, clicks and types inside the virtual Mac, and the host checks every file before it reaches you.</p>
     <div class="cta reveal">
-      <a class="btn primary" id="dl-hero" href="https://github.com/chatcomputer/chatcomputer/releases"><span data-i18n="hero.download">Download for Mac</span> <small class="ver" data-version></small></a>
-      <a class="btn ghost" href="https://github.com/chatcomputer/chatcomputer"><span data-i18n="hero.source">View source</span> →</a>
+      <a class="btn primary" id="dl-hero" href="https://github.com/chatcomputer/chatcomputer/releases" target="_blank" rel="noopener"><span data-i18n="hero.download">Download for Mac</span> <small class="ver" data-version></small></a>
+      <a class="btn ghost" href="https://github.com/chatcomputer/chatcomputer" target="_blank" rel="noopener"><span data-i18n="hero.source">View source</span> →</a>
     </div>
     <p class="fine reveal" data-i18n="hero.fine">Free · Apache 2.0 · Bring your own model key: Claude, DeepSeek, OpenAI, Gemini and more</p>
 
@@ -176,7 +176,11 @@
       <img src="assets/icon-512.png" alt="" width="96" height="96">
       <h2 data-i18n="dl.h2">Get Chat Computer</h2>
       <p class="sub" data-i18n="dl.sub">Signed and notarized by Apple. Setup downloads and installs macOS in the virtual machine (about 26 GB), creates its account and grants the agent its permissions, all without you clicking through.</p>
-      <a class="btn primary big" id="dl-main" href="https://github.com/chatcomputer/chatcomputer/releases"><span data-i18n="hero.download">Download for Mac</span> <small class="ver" data-version></small></a>
+      <a class="btn primary big" id="dl-main" href="https://github.com/chatcomputer/chatcomputer/releases" target="_blank" rel="noopener"><span data-i18n="hero.download">Download for Mac</span> <small class="ver" data-version></small></a>
+      <div class="brew">
+        <p data-i18n="dl.brew">Or install with Homebrew, which also puts the chatcomputer command on your PATH:</p>
+        <div class="cmd"><code>brew install --cask chatcomputer/tap/chatcomputer</code><button type="button" data-copy="brew install --cask chatcomputer/tap/chatcomputer" aria-label="Copy"><span data-i18n="dl.copy">Copy</span></button></div>
+      </div>
       <ul class="req">
         <li><b data-i18n="req.chip">Chip</b><span data-i18n="req.chipv">Apple silicon</span></li>
         <li><b data-i18n="req.os">System</b><span>macOS 27</span></li>
@@ -184,11 +188,11 @@
         <li><b data-i18n="req.disk">Disk</b><span data-i18n="req.diskv">about 70 GB free</span></li>
       </ul>
       <ol class="steps">
-        <li><span class="n">1</span><div><b data-i18n="st.1t">Download and unzip</b><p data-i18n="st.1d">Open ChatComputer.zip and move Chat Computer.app to Applications.</p></div></li>
+        <li><span class="n">1</span><div><b data-i18n="st.1t">Download and unzip</b><p data-i18n="st.1d">Open ChatComputer.zip and move ChatComputer.app to Applications.</p><p class="alt" data-i18n="st.1alt">With Homebrew, this step is already done.</p></div></li>
         <li><span class="n">2</span><div><b data-i18n="st.2t">Open it and click Continue</b><p data-i18n="st.2d">Setup runs on its own for about 10 minutes. The Dock icon bounces when it needs you.</p></div></li>
         <li><span class="n">3</span><div><b data-i18n="st.3t">Add your model</b><p data-i18n="st.3d">Pick a provider, paste an API key, and type your first task.</p></div></li>
       </ol>
-      <a class="gh-link" href="https://github.com/chatcomputer/chatcomputer"><span data-i18n="dl.gh">Source code on GitHub</span> · github.com/chatcomputer/chatcomputer →</a>
+      <a class="gh-link" href="https://github.com/chatcomputer/chatcomputer" target="_blank" rel="noopener"><span data-i18n="dl.gh">Source code on GitHub</span> · github.com/chatcomputer/chatcomputer →</a>
     </div>
   </section>
 
@@ -207,10 +211,10 @@
 <footer class="foot">
   <div><img src="assets/icon-512.png" alt="" width="20" height="20"> Chat Computer</div>
   <div class="links">
-    <a href="https://github.com/chatcomputer/chatcomputer">GitHub</a>
-    <a href="https://github.com/chatcomputer/chatcomputer/releases" data-i18n="f.releases">Releases</a>
-    <a href="https://github.com/chatcomputer/chatcomputer/blob/main/PRIVACY.md" data-i18n="f.privacy">Privacy</a>
-    <a href="https://github.com/chatcomputer/chatcomputer/blob/main/LICENSE">Apache 2.0</a>
+    <a href="https://github.com/chatcomputer/chatcomputer" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/chatcomputer/chatcomputer/releases" target="_blank" rel="noopener" data-i18n="f.releases">Releases</a>
+    <a href="https://github.com/chatcomputer/chatcomputer/blob/main/PRIVACY.md" target="_blank" rel="noopener" data-i18n="f.privacy">Privacy</a>
+    <a href="https://github.com/chatcomputer/chatcomputer/blob/main/LICENSE" target="_blank" rel="noopener">Apache 2.0</a>
   </div>
   <div class="dim" data-i18n="f.note">Not affiliated with Apple. macOS is a trademark of Apple Inc.</div>
 </footer>
