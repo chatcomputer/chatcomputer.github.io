@@ -237,6 +237,13 @@ h2 { font-size: clamp(32px, 4.6vw, 54px); line-height: 1.08; margin-top: 14px; m
 .req { list-style: none; padding: 0; margin: 40px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 760px; }
 .req li { padding: 16px; border-radius: 14px; border: 1px solid var(--line); background: rgba(5,6,15,.45); display: grid; gap: 4px; }
 .req b { font: 500 12px "JetBrains Mono", monospace; color: var(--cyan); text-transform: uppercase; letter-spacing: 1px; }
+.steps { list-style: none; padding: 0; margin: 28px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 760px; text-align: left; }
+.steps li { display: flex; gap: 14px; padding: 18px; border-radius: 14px; border: 1px solid var(--line); background: rgba(5,6,15,.45); }
+.steps .n { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font: 600 13px "JetBrains Mono", monospace; color: #05060f; background: linear-gradient(135deg, var(--cyan), var(--pink)); }
+.steps b { display: block; margin-bottom: 4px; }
+.steps p { margin: 0; color: var(--dim); font-size: 14px; line-height: 1.5; }
+.gh-link { display: inline-block; margin-top: 28px; color: var(--dim); font: 500 14px "JetBrains Mono", monospace; text-decoration: none; }
+.gh-link:hover { color: var(--cyan); }
 
 .faq { max-width: 860px; }
 .faq details { border-bottom: 1px solid var(--line); padding: 22px 0; }
@@ -288,7 +295,7 @@ h2 { font-size: clamp(32px, 4.6vw, 54px); line-height: 1.08; margin-top: 14px; m
 }
 @media (max-width: 620px) {
   .hero { padding-top: 64px; }
-  .cards, .numbers, .flow, .gallery, .req { grid-template-columns: 1fr; }
+  .cards, .numbers, .flow, .gallery, .req, .steps { grid-template-columns: 1fr; }
   .shot.wide { grid-column: auto; }
   .hud { display: none; }
   .frame-bar span { display: none; }
