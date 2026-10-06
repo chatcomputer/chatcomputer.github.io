@@ -92,8 +92,6 @@ h1 { font-size: clamp(38px, 5.6vw, 76px); line-height: 1.02; margin-top: 26px; f
 .btn.ghost { border: 1px solid var(--line); background: var(--glass); }
 .btn.ghost:hover { border-color: rgba(34, 227, 255, .5); }
 .btn.big { height: 58px; padding: 0 34px; font-size: 17px; margin-top: 8px; }
-.ver { font: 500 12px "JetBrains Mono", monospace; opacity: .7; }
-.ver:empty { display: none; }
 .fine { color: var(--dim); font-size: 13px; margin-top: 18px; }
 
 /* Hero stage */

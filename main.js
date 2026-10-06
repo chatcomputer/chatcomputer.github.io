@@ -260,7 +260,6 @@
     .then(([release]) => {
       if (!release) return;
       // The release page: notes, the zip and its SHA-256 in one place.
-      document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = release.tag_name; });
       if (release.html_url) ["dl-hero", "dl-main"].forEach((id) => { document.getElementById(id).href = release.html_url; });
     })
     .catch(() => {});
